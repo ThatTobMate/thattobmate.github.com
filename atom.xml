@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://codecrunch.io/"/>
-  <updated>2015-10-25T14:12:45.000Z</updated>
+  <updated>2015-10-25T17:34:09.000Z</updated>
   <id>http://codecrunch.io/</id>
   
   <author>
@@ -19,12 +19,35 @@
     <link href="http://codecrunch.io/2015/10/25/Hexo/"/>
     <id>http://codecrunch.io/2015/10/25/Hexo/</id>
     <published>2015-10-25T13:56:21.000Z</published>
-    <updated>2015-10-25T14:12:45.000Z</updated>
-    <content type="html"><![CDATA[<p>In this post I am going to show you how I created CodeCrunch.io with a Node.js based blogging framework called <a href="https://hexo.io" target="_blank" rel="external">Hexo</a>.<br><a id="more"></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(&#39;Hello World!&#39;);</span><br></pre></td></tr></table></figure>
+    <updated>2015-10-25T17:34:09.000Z</updated>
+    <content type="html"><![CDATA[<p>In this post I am going to show you how I created CodeCrunch.io with a Node.js based blogging framework called <a href="https://hexo.io" target="_blank" rel="external">Hexo</a>. I am using Mac OSX Yosemite, Node version 0.12.4 and Hexo version 3.1.1.<br><a id="more"></a></p>
+<p>I decided to use Hexo as I have briefly used Jekyll before and I wanted to try something different and I am trying to get more familiar with the Node ecosystem and npm. I was incredibly surprised at how quickly and easily I was able to generate a fully functioning blog site with just a few commands in the command line.</p>
+<p>To get started you will need to ensure that you have Node.js installed on your machine, you can download it <a href="https://nodejs.org/en/download/" target="_blank" rel="external">here</a>. Once you have installed this you should now have access to npm commands from your terminal. This is the node package manager and will allow you to install packages that we want to use for this guide. You can read more about npm <a href="https://docs.npmjs.com/getting-started/what-is-npm" target="_blank" rel="external">here</a>.</p>
+<p>Next we will install Hexo by running the following command in the terminal:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>Once Hexo is installed create a directory for your blog application and cd into it:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir my_blog&#10;cd my_blog</span><br></pre></td></tr></table></figure>
+<p>Next you want to initialize this directory as a Hexo directory and then install the node package dependencies by running:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init&#10;npm install</span><br></pre></td></tr></table></figure>
+<p>This will create some files and subdirectories for your app and it should look like this</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#10;&#9500;&#9472;&#9472; _config.yml&#10;&#9500;&#9472;&#9472; package.json&#10;&#9500;&#9472;&#9472; scaffolds&#10;&#9500;&#9472;&#9472; scripts&#10;&#9500;&#9472;&#9472; source&#10;|   &#9500;&#9472;&#9472; _drafts&#10;|   &#9492;&#9472;&#9472; _posts&#10;&#9492;&#9472;&#9472; themes</span><br></pre></td></tr></table></figure>
+<h3 id="_config-yml">_config.yml</h3><p>The site configuration file. You can configure most of the settings here, like the nav links, social network links, personal information and deployment method.</p>
+<h3 id="package-json">package.json</h3><p>The file package.json will contain all the node module dependencies for Hexo.</p>
+<h3 id="scaffolds_folder">scaffolds folder</h3><p>The <a href="https://hexo.io/docs/writing.html#Scaffolds" target="_blank" rel="external">Scaffold</a> folder. When you create a new post, Hexo bases the new file on the scaffold.</p>
+<h3 id="scripts_folder">scripts folder</h3><p>The <a href="https://hexo.io/docs/writing.html#Scripts" target="_blank" rel="external">scripts</a> folder. Scripts are the easiest way to extend Hexo. JavaScript files in this folder are executed automatically.</p>
+<h3 id="source_folder">source folder</h3><p>The source folder is where you put your site’s content. Hexo ignores hidden files and files or folders whose names are prefixed with _ (underscore) - except the _posts folder. Renderable files (e.g. Markdown, HTML) will be processed and put into the public folder, while other files will simply be copied.</p>
+<h3 id="themes_folder">themes folder</h3><p>Hexo generates a static website by combining the site contents with the theme. This is where you place those themes, the default Hexo theme is called Landscape. I am using the Icarus theme but there are more to choose from, you can find them <a href="https://hexo.io/themes/" target="_blank" rel="external">here</a>.</p>
+<h1 id="Running_your_server">Running your server</h1><p>Now that you are more familiar with the structure of the application you can run your server and see your new blogging site is ready.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>You will have a new server running on localhost:4000, if you visit this in the browser you should see the landing page for your site with a basic Hello World blog post detailing some more commands and links to more documentation.</p>
+<h1 id="Creating_your_first_blog_post">Creating your first blog post</h1><p>Now that we have our application up and running you will want to start creating content for your blog.<br>To do this kill your server and run the command:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new test</span><br></pre></td></tr></table></figure>
+<p>This will create a new article with the title ‘test’ in source/_posts. Your article will be in a .md file and will look like below.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title: test&#10;date: 2015-10-25 17:28:29&#10;tags:&#10;---</span><br></pre></td></tr></table></figure>
+<p>You can add your content below the 3 dashes. This bit of markdown code is called Front-matter, it is a block of YAML or JSON at the beginning of the file that is used to configure settings for your posts. Read more about it and configuration settings <a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="external">here</a>.</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>In this post I am going to show you how I created CodeCrunch.io with a Node.js based blogging framework called <a href="https://hexo.io">Hexo</a>.<br>]]>
+    <![CDATA[<p>In this post I am going to show you how I created CodeCrunch.io with a Node.js based blogging framework called <a href="https://hexo.io">Hexo</a>. I am using Mac OSX Yosemite, Node version 0.12.4 and Hexo version 3.1.1.<br>]]>
     
     </summary>
     
