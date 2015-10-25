@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://codecrunch.io/"/>
-  <updated>2015-10-25T14:02:59.000Z</updated>
+  <updated>2015-10-25T14:12:45.000Z</updated>
   <id>http://codecrunch.io/</id>
   
   <author>
@@ -19,12 +19,13 @@
     <link href="http://codecrunch.io/2015/10/25/Hexo/"/>
     <id>http://codecrunch.io/2015/10/25/Hexo/</id>
     <published>2015-10-25T13:56:21.000Z</published>
-    <updated>2015-10-25T14:02:59.000Z</updated>
-    <content type="html"><![CDATA[<p>In this post I am going to show you how I created CodeCrunch.io with a Node.js based blogging framework called Hexo.io</p>
+    <updated>2015-10-25T14:12:45.000Z</updated>
+    <content type="html"><![CDATA[<p>In this post I am going to show you how I created CodeCrunch.io with a Node.js based blogging framework called <a href="https://hexo.io" target="_blank" rel="external">Hexo</a>.<br><a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(&#39;Hello World!&#39;);</span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>In this post I am going to show you how I created CodeCrunch.io with a Node.js based blogging framework called Hexo.io</p>
-]]>
+    <![CDATA[<p>In this post I am going to show you how I created CodeCrunch.io with a Node.js based blogging framework called <a href="https://hexo.io">Hexo</a>.<br>]]>
+    
     </summary>
     
       <category term="Blog" scheme="http://codecrunch.io/tags/Blog/"/>
