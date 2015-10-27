@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://codecrunch.io/"/>
-  <updated>2015-10-27T13:00:02.000Z</updated>
+  <updated>2015-10-27T13:02:42.000Z</updated>
   <id>http://codecrunch.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://codecrunch.io/2015/10/27/Node/"/>
     <id>http://codecrunch.io/2015/10/27/Node/</id>
     <published>2015-10-27T12:52:08.000Z</published>
-    <updated>2015-10-27T13:00:02.000Z</updated>
+    <updated>2015-10-27T13:02:42.000Z</updated>
     <content type="html"><![CDATA[<p>My next article will be part one of a guide on how to create a authentication system using the MEAN stack (MongoDB, Express, AngularJS and Node.js) and JSON web tokens.</p>
 <a id="more"></a>
 <p> I am currently teaching myself Node.js and want to build some of my own products using this stack, so I thought I would show my process on how I created this authentication system.<br> We will build Node as an API and we will use Yeoman to create and Angular front-end that calls the API and allows us to signup, login, logout, and edit users. You will be able to then use this app as a basic start point for any future applications you want to build using this stack</p>
