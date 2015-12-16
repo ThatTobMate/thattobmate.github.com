@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://codecrunch.io/"/>
-  <updated>2015-10-27T13:02:42.000Z</updated>
+  <updated>2015-12-16T10:48:47.000Z</updated>
   <id>http://codecrunch.io/</id>
   
   <author>
@@ -13,6 +13,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Sails.js - First Impressions]]></title>
+    <link href="http://codecrunch.io/2015/12/16/Sails-js/"/>
+    <id>http://codecrunch.io/2015/12/16/Sails-js/</id>
+    <published>2015-12-16T10:34:24.000Z</published>
+    <updated>2015-12-16T10:48:47.000Z</updated>
+    <content type="html"><![CDATA[<p>I have recently been trying to teach myself Node.js and it’s associated frameworks because I want to build an API for my personal project, a competitive gaming website. Coming from a Ruby on Rails background I have been looking for a framework that can offer me that structure and convention that Ruby on Rails gives you so that I can ease myself into Node and bring some familiarity to writing javascript in the back end. </p>
+<p>Enter <a href="http://sailsjs.org/" target="_blank" rel="external">Sails.js</a>.</p>
+<a id="more"></a>
+<p>So I have been using Sails for one day so far… Very early stages I know, but my first impressions are that it’s a brilliant framework and </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>I have recently been trying to teach myself Node.js and it’s associated frameworks because I want to build an API for my personal project, a competitive gaming website. Coming from a Ruby on Rails background I have been looking for a framework that can offer me that structure and convention that Ruby on Rails gives you so that I can ease myself into Node and bring some familiarity to writing javascript in the back end. </p>
+<p>Enter <a href="http://sailsjs.org/">Sails.js</a>.</p>]]>
+    
+    </summary>
+    
+      <category term="Introduction" scheme="http://codecrunch.io/tags/Introduction/"/>
+    
+      <category term="Node" scheme="http://codecrunch.io/tags/Node/"/>
+    
+      <category term="Sails" scheme="http://codecrunch.io/tags/Sails/"/>
+    
+      <category term="Sails" scheme="http://codecrunch.io/categories/Sails/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Tutorial on using the MEAN stack and JWT to create an authentication system]]></title>
