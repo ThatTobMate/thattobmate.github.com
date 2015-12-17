@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://codecrunch.io/"/>
-  <updated>2015-12-16T10:56:50.000Z</updated>
+  <updated>2015-12-17T11:04:01.000Z</updated>
   <id>http://codecrunch.io/</id>
   
   <author>
@@ -19,12 +19,20 @@
     <link href="http://codecrunch.io/2015/12/16/Sails-js/"/>
     <id>http://codecrunch.io/2015/12/16/Sails-js/</id>
     <published>2015-12-16T10:34:24.000Z</published>
-    <updated>2015-12-16T10:56:50.000Z</updated>
+    <updated>2015-12-17T11:04:01.000Z</updated>
     <content type="html"><![CDATA[<p>I have recently been trying to teach myself Node.js and it’s associated frameworks because I want to build an API for my personal project, a competitive gaming website. Coming from a Ruby on Rails background I have been looking for a framework that can offer me that structure and convention that Ruby on Rails gives you so that I can ease myself into Node and bring some familiarity to writing javascript in the back end. </p>
 <p>Enter <a href="http://sailsjs.org/" target="_blank" rel="external">Sails.js</a>.</p>
 <a id="more"></a>
-<p>So I have been using Sails for one day so far… Very early stages I know, but my first impressions are that it’s a great framework for beginner Node.js developers. If you come from a Rails background like myself then Sails is going to be extremely familiar to you, it feels like I am writing a Rails API in JavaScript.</p>
-<p>Sails is built ontop of Express.js and I believe you can mix and match Express modules with your Sails app.</p>
+<p>So I have been using Sails.js for one day so far… Very early stages I know, but my first impressions are that it’s a great framework for beginner Node.js developers. If you come from a Rails background like myself then Sails.js is going to be extremely familiar to you, it feels like I am writing a Rails API in JavaScript.</p>
+<p>Sails.js is built ontop of Express.js and I believe you can mix and match Express.js modules with your Sails.js app. You can create an API extremely quickly just by running a few commands in the command line, for example:</p>
+<p>To create an API endpoint for a User model, I just need to run the command</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sails generate api User</span><br></pre></td></tr></table></figure>
+<p>This will create a User controller and User model, next I have to define the fields and data types I want in my User table. I do this in the generated User model, in the attributes block.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">attributes: &#10;  &#123;&#10;    username: &#123;&#10;        type: &#39;string&#39;,&#10;        required: true,&#10;        unique: true&#10;    &#125;,&#10;    password: &#123;&#10;        type: &#39;string&#39;&#10;    &#125;,&#10;    email: &#123;&#10;        type: &#39;email&#39;,&#10;        required: true,&#10;        unique: true&#10;    &#125;&#10;  &#125;</span><br></pre></td></tr></table></figure>
+<p>This really is all the code that I need to start creating Users with a username, password and email. When you open the User controller it will look empty, but Sails.js has actually created all of your RESTful routes for you and you can use this controller to include custom routes. If I now start up the server (sails defaults to <a href="http://localhost:1337" target="_blank" rel="external">http://localhost:1337</a>):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sails lift</span><br></pre></td></tr></table></figure>
+<p>I can now create, update, delete and get the users via http requests to <a href="http://localhost:1337/user" target="_blank" rel="external">http://localhost:1337/user</a>. So after just 2 commands in the command line and defining the fields and data types in my model I now have my fist endpoint for my API.<br>Obviously this is a very simple example but as you can see Sails.js has made it incredibly easy to create an API. Also if you are from a Rails background you will find this all very familiar with the generators and how it sets up your standard RESTful routes with just a few commands.</p>
+<p>I am going to be writing more about Sails.js as I use it more and build out my gaming site. I will be talking about policies, how to hook up the app to a database, the ORM included to allow creating relationships between models easier and any issues I come across.</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>I have recently been trying to teach myself Node.js and it’s associated frameworks because I want to build an API for my personal project, a competitive gaming website. Coming from a Ruby on Rails background I have been looking for a framework that can offer me that structure and convention that Ruby on Rails gives you so that I can ease myself into Node and bring some familiarity to writing javascript in the back end. </p>
@@ -36,9 +44,9 @@
     
       <category term="Node" scheme="http://codecrunch.io/tags/Node/"/>
     
-      <category term="Sails" scheme="http://codecrunch.io/tags/Sails/"/>
+      <category term="Sails.js" scheme="http://codecrunch.io/tags/Sails-js/"/>
     
-      <category term="Sails" scheme="http://codecrunch.io/categories/Sails/"/>
+      <category term="Sails.js" scheme="http://codecrunch.io/categories/Sails-js/"/>
     
   </entry>
   
